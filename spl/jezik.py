@@ -287,6 +287,9 @@ class NullValue:
     def __repr__(self):
         return '<null>'
 
+    def __str__(self):
+        return 'null'
+
 class NoReturnValue:
     def __repr__(self):
         return '<no-ret>'
