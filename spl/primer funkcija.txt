@@ -1,0 +1,9 @@
+funkcija dodaj(broj a, broj b) { vrati $a + $b; }
+
+funkcija kazi(niska ime, promenljiva poruka)
+{
+    napisi($ime + " kaze: \"" + pretvori($poruka, "niska") + "\"");
+}
+
+napisi(dodaj(20, 20));
+kazi("Nikola", "Dobar dan!");
