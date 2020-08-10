@@ -30,7 +30,7 @@ broj a = 20;
 broj b = 10;
 ako (a == b)
 {
-  napisi("Jednaki su!);
+  napisi("Jednaki su!");
 }
 inace
 {
