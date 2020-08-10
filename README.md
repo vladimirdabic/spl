@@ -1,4 +1,4 @@
-# SPL (Srpski Programski Jezik)
+# SPL (Serbian Programming Language, Srpski Programski Jezik)
 SPL је програмски језик написан у пајтону из забаве.\
 Синтакса језика је инспирисана од стране C++ и C#.
 
