@@ -1,0 +1,51 @@
+- NAPISI (PRINT) -
+    napisi(promenljiva parametar, ...)
+
+    Vraca: null
+    Primer:
+        napisi("Hello, World!");
+        
+
+- UNOS (INPUT) -
+    unos(niska pitanje)
+
+    Vraca: niska (Unesen tekst)
+    Primer:
+        niska ime = unos("Unesi ime: ");
+        
+
+- TIP (type / typeof) -
+    tip(promenljiva parametar)
+
+    Vraca: niska (Tip Parametra)
+    Primer:
+        broj a = 20;
+        niska test = tip(a);
+        
+
+- PRETVORI ( str(20), int("10") )
+    pretvori(promenljiva parametar, niska tip)
+
+    Vraca: [niska tip] (Parametar pretvoren u dati tip)
+    Primer:
+        niska broj_txt = "2000";
+        broj broj_num = pretvori(broj_txt, "broj");
+        
+
+- NASUMICAN ( randomint )
+    nasumican(broj najmanji, broj najveci)
+
+    Vraca: broj (Nasumican broj izmedju najmanjeg i najveceg datog broja)
+    Primer:
+        broj a = nasumican(1, 100);
+        napisi(a);
+        
+
+- IZADJI ( sys.exit )
+    izadji(broj kod = 0)
+
+    Vraca: null
+    Primer:
+        napisi("Pozdrav!");
+        izadji();
+        napisi("Ovo ne bi trebalo da se ispise");
