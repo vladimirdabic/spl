@@ -1,0 +1,40 @@
+// Primer programa
+// Pogodi nasumican broj
+
+broj nasumican_broj = nasumican(1, 100);
+
+// Posto jezik ne podrzava 'break' da se izadje iz loop-a moramo onda definisati bool koji kontrolise loop
+bool se_igra = true;
+
+dok se_igra
+{
+    // Promenljiva prima bilo koji tip vrednosti
+    promenljiva nas_broj = pretvori(unos("Unesi broj: "), "broj");
+
+    // Kondicije ne moraju da se stavljaju u zagradu, ali mogu ako hocete.
+    ako (nas_broj == null)
+    {
+        napisi("Unesite validan broj!");
+    }
+    inace
+    {
+
+        // Jezik ne podrzava 'else if' trenutno
+
+        ako (nas_broj < nasumican_broj)
+        {
+            napisi("Broj je manji od nasumicnog broja.");
+        }
+
+        ako (nas_broj > nasumican_broj)
+        {
+            napisi("Broj je veci od nasumicnog broja.");
+        }
+
+        ako (nas_broj == nasumican_broj)
+        {
+            bool se_igra = false;
+            napisi("Bravo! Pogodio si broj!");
+        }
+    }
+}

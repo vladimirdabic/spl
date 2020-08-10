@@ -1,0 +1,26 @@
+broj a = 20;
+bool b = true;
+
+// Niska i niz su istog tipa
+niska msg = "Hello World";
+niz msg2 = "Hello World";
+
+// Svaka tip promenljive ima 'default value'
+// Broj - 0
+// Niska/Niz - ""
+// Bool - false
+broj num1;
+niska str1;
+niz str2;
+bool mybool;
+
+
+// Tip: promenljiva
+// Ovaj tip prima bilo koju vrednost
+promenljiva x = "Hello";
+promenljiva num3 = 20;
+
+// Uvek se mora staviti tip kada se dodeljuje vrednost jednoj promenljivoj
+// Ovaj kod nije validan:
+a = "Hello";
+b = 20
