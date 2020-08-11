@@ -17,6 +17,10 @@ def run_code(txt):
 
 
 if len(sys.argv) != 2:
+
+    print("SPL Interactive Shell")
+    print("Ukucaj 'izadji();' da zatvoris ovaj program")
+
     while True:
         txt = input(">>> ")
 
