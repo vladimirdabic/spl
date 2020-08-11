@@ -80,7 +80,7 @@ class Lexer(sly.Lexer):
 
     @_(r';+')
     def NL(self, t):
-        self.lineno += t.value.count('\n')
+        self.lineno += t.value.count(';')
         return t
 
     COMPSYMB = r"==|!=|<=|<|>=|>"
@@ -91,7 +91,7 @@ class Lexer(sly.Lexer):
     MUL = r'\*'
 
     def error(self, t):
-        raise LexerError(f"Ne poznati karakter blizu linije {self.lineno}: '{t.value[0]}'")
+        raise LexerError(f"Ne poznati karakter na liniji {self.lineno}: '{t.value[0]}'")
 
 ######################
 # PARSER
