@@ -290,10 +290,6 @@ class NullValue:
     def __str__(self):
         return 'null'
 
-class NoReturnValue:
-    def __repr__(self):
-        return '<no-ret>'
-
 ######################
 # ERROR CLASSES
 ######################
@@ -496,9 +492,14 @@ class Interpreter:
 ######################
 
 ## Decorator for built in functions
-def built_in_function(func):
-    built_in_functions[func.__name__] = func
-    return None
+def built_in_function(*args, **kwargs):
+    def inner(func):
+        fname = kwargs.get('name', func.__name__)
+        built_in_functions[fname] = func
+    if len(args) == 1 and callable(args[0]):
+        return inner(args[0])
+    else:
+        return inner
 
 @built_in_function
 def napisi(*args):
@@ -524,7 +525,6 @@ def izadji(code=0):
 def pretvori(val, tip):
     if tip not in type_dict:
         return NullValue()
-    
     try:
         return type_dict[tip](val)
     except ValueError:
